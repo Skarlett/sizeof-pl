@@ -126,13 +126,13 @@ sub main {
       $num =~ s/$SIZE_INPUT//;
       $first_arg =~ s/${FLOATING_PNT}//;
       
-      print "input sym: $first_arg\n";
+      #print "input sym: $first_arg\n";
       $first_arg = sym_to_pow($first_arg); # change symbol
       
-      print("input: $num\npow: $first_arg\n");
+      #print("input: $num\npow: $first_arg\n");
 
       my $nbytes = hsize_to_bytes($num, $first_arg);
-      print "output pow: $symbol\n";
+      #print "output pow: $symbol\n";
       
       bytes_to_hsize($nbytes, $symbol);
   }
