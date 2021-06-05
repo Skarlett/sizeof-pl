@@ -29,15 +29,16 @@ sub sym_to_pow {
     if ($_[0]) {
         for(@SIZES) {
             if ($_ eq uc $_[0]) {
-                last;
+                return $i;
             }
             $i += 1;
         }
-
-        return $i;
+        # Unknown symbol
+        return -1;
     }
     return 0;
 }
+
 sub bytes_to_hsize {
     my ($nbytes, $pow) = @_;
     my $h_size_trimmed;
