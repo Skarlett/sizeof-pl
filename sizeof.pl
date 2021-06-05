@@ -98,15 +98,14 @@ sub main {
   );
   
 
-  if ($help_flag) {
+  if ($help_flag or not @ARGV) {
     print "$USAGE\n";
     exit(0);
   }
 
-  if (@ARGV) { 
-    $first_arg=$ARGV[0];
-  }
-
+   
+  $first_arg=$ARGV[0];
+  
   # User specified human size
   if ($symbol ne 'd') {
     $symbol = sym_to_pow($symbol)
